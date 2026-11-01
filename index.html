@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Cats &amp; Friends — первое кото-кафе в Узбекистане</title>
+<meta name="description" content="Кото-кафе Cats & Friends в Ташкенте: котики, чай и кофе, настолки, коворкинг, дни рождения и виртуальное усыновление. Чиланзар, 3 квартал, 23. Каждый день 10:00–22:00.">
+<meta name="theme-color" content="#F5C518">
+<meta property="og:type" content="website"><meta property="og:title" content="Cats &amp; Friends — первое кото-кафе в Узбекистане"><meta property="og:description" content="Котики, чай и кофе, настолки и коворкинг. Чиланзар, 3 квартал, 23 · каждый день 10:00–22:00">
+<!-- joylanganda og:image ni absolyut URL ga almashtiring -->
+<meta property="og:image" content="assets/p/kot-tabby.jpg"><meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23F5C518'/%3E%3Cpath d='M14 54V38c0-7 3-12 6-15l-2-15 13 9h2l13-9-2 15c3 3 6 8 6 15v16z' fill='%2317130B'/%3E%3Ccircle cx='25' cy='37' r='3' fill='%23F5C518'/%3E%3Ccircle cx='39' cy='37' r='3' fill='%23F5C518'/%3E%3Cpath d='M30 43h4l-2 2z' fill='%23F5C518'/%3E%3C/svg%3E">
+<style>
+:root{--y:#F5C518;--y2:#FFB000;--ink:#17130B;--cream:#FFF6DC;--paper:#FFFBEF;--mut:#6d6450;--r:28px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--cream);overflow-x:clip}
+body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:var(--cream);overflow-x:clip;-webkit-font-smoothing:antialiased}
+html[lang=ru] .uz,html[lang=uz] .ru{display:none!important}
+a{color:inherit;text-decoration:none}
+img,video{display:block;max-width:100%}
+h1,h2,h3,.f-display{font-family:Unbounded,sans-serif;letter-spacing:-.02em;line-height:1}
+.wrap{width:min(1240px,92vw);margin:0 auto;position:relative}
+.tag{display:inline-flex;gap:.5em;align-items:center;font:700 12px/1 Manrope;letter-spacing:.14em;text-transform:uppercase;padding:.7em 1.1em;border:1.5px solid var(--ink);border-radius:99px;background:var(--paper)}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--y2);box-shadow:0 0 0 3px #ffb00033}
+.btn{display:inline-flex;align-items:center;gap:.6em;font:800 15px/1 Manrope;padding:1.05em 1.6em;border-radius:99px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 6px 0 var(--ink)}
+.btn.y{background:var(--y);color:var(--ink)}
+.btn.o{background:transparent;color:var(--ink)}
+section{position:relative}
+
+.i{width:1.2em;height:1.2em;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.22em}
+.btn .i{width:1.25em;height:1.25em;transition:transform .3s}.btn:hover .i.ar{transform:translateX(4px)}
+/* ---------- walking cats ---------- */
+.lane{position:absolute;left:0;right:0;top:0;height:0;z-index:7;pointer-events:none}
+.walker{position:absolute;bottom:-2px;left:-130px;width:104px;animation:walkX var(--dur,26s) linear infinite;animation-delay:var(--del,0s)}
+.walker.rev{animation-name:walkXr}.walker.rev .wc{transform:scaleX(-1)}
+@keyframes walkX{0%{left:-130px}100%{left:calc(100% + 30px)}}
+@keyframes walkXr{0%{left:calc(100% + 30px)}100%{left:-130px}}
+.wc{display:block;width:100%;overflow:visible}
+.wc .lg{transform-box:fill-box;transform-origin:50% 8%;animation:leg .62s ease-in-out infinite alternate}
+.wc .lg.f2{animation-direction:alternate-reverse}
+.wc .bd{animation:bob .31s ease-in-out infinite alternate}
+.wc .tl{transform-box:fill-box;transform-origin:100% 85%;animation:tail 1.6s ease-in-out infinite alternate}
+.wc .hd{transform-box:fill-box;transform-origin:30% 80%;animation:head 2.6s ease-in-out infinite}
+.wc .ey{transform-box:fill-box;transform-origin:center;animation:blink 4.2s infinite}
+@keyframes leg{from{transform:rotate(-22deg)}to{transform:rotate(22deg)}}
+@keyframes bob{to{transform:translateY(-1.8px)}}
+@keyframes tail{from{transform:rotate(-10deg)}to{transform:rotate(14deg)}}
+@keyframes head{0%,70%,100%{transform:rotate(0)}80%{transform:rotate(-7deg)}90%{transform:rotate(3deg)}}
+@keyframes blink{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}
+.pawprint{position:absolute;top:-11px;width:11px;height:11px;color:#17130B;opacity:.28;pointer-events:none;animation:pawfade 2.8s forwards}
+.pawprint.lt{color:#FFF6DC;opacity:.35}
+.pawprint .i{width:100%;height:100%}
+@keyframes pawfade{to{opacity:0}}
+@media(max-width:700px){.walker{width:74px}}
+@media(prefers-reduced-motion:reduce){.walker,.pawprint{display:none}}
+/* ---------- 3D canvas ---------- */
+#gl{position:fixed;inset:0;width:100%;height:100%;z-index:6;pointer-events:none}
+
+/* ---------- nav ---------- */
+
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:16px 0;transition:background .3s,padding .3s}
+nav.s{background:#fff6dcee;backdrop-filter:blur(10px);padding:10px 0;box-shadow:0 1px 0 #17130b14}
+nav .wrap{display:flex;align-items:center;gap:24px}
+.logo{display:flex;align-items:center}.logo-svg{height:60px;width:auto;overflow:visible;transition:transform .4s cubic-bezier(.3,1.6,.5,1),height .3s}.logo:hover .logo-svg{transform:rotate(-3deg) scale(1.05)}nav.s .logo-svg{height:50px}@media(max-width:900px){.logo-svg{height:56px}nav.s .logo-svg{height:48px}}
+nav ul{display:flex;gap:22px;list-style:none;margin-left:auto;font-weight:700;font-size:14px}
+nav ul a{position:relative}
+nav ul a:after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--ink);transform:scaleX(0);transition:transform .3s;transform-origin:left}
+nav ul a:hover:after{transform:scaleX(1)}
+.lang{display:flex;border:1.5px solid var(--ink);border-radius:99px;overflow:hidden;font:800 12px Manrope}
+.lang button{border:0;background:none;padding:.55em .8em;cursor:pointer;font:inherit;color:var(--ink)}
+html[lang=ru] .lang [data-l=ru],html[lang=uz] .lang [data-l=uz]{background:var(--ink);color:var(--y)}
+nav .btn{padding:.8em 1.2em;font-size:13px}
+@media(max-width:900px){nav ul,nav .btn .num{display:none}.lang{margin-left:auto}nav .btn{padding:0;width:42px;height:42px;justify-content:center}.lang button{padding:.9em .7em}.lang{flex-shrink:0}nav .wrap{gap:10px}footer{padding-bottom:64px!important}}
+body.typing 
+nav .btn .ic{display:none}@media(max-width:900px){nav .btn .ic{display:block}}
+
+/* ---------- hero ---------- */
+.hero{min-height:100svh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.08fr .92fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(44px,7.2vw,104px);font-weight:900;margin:22px 0 26px}
+.hero h1 .hl{background:var(--y);padding:0 .12em;border-radius:.12em;box-decoration-break:clone;-webkit-box-decoration-break:clone;display:inline}
+.hero h1 .ln{display:block;overflow:hidden}
+.hero h1 .ln>span{display:inline-block}
+.hero p.lead{font-size:clamp(17px,1.5vw,20px);line-height:1.55;max-width:520px;color:#3c3626}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.hero .meta{display:flex;gap:26px;margin-top:38px;flex-wrap:wrap;font-weight:700;font-size:14px}
+.hero .meta div{display:flex;gap:8px;align-items:center}
+.hero .meta .i{width:34px;height:34px;padding:7px;border-radius:50%;background:var(--y);border:1.5px solid var(--ink)}
+.portal{position:relative;aspect-ratio:1;width:100%;max-width:560px;justify-self:end}
+.portal .ring{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 0deg,var(--y),var(--y2),var(--y));padding:14px;box-shadow:0 30px 80px -20px #b8860b88}
+.portal .ring video{width:100%;height:100%;object-fit:cover;border-radius:50%;background:#2a2417}
+.portal .sticker{position:absolute;font:900 13px/1.1 Unbounded;background:var(--paper);border:2px solid var(--ink);border-radius:16px;padding:.8em 1em;box-shadow:4px 4px 0 var(--ink);z-index:2}
+.portal .s1{display:flex;align-items:center;gap:10px;white-space:nowrap}.sticker .sic{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--y);border:1.5px solid var(--ink);flex:none}@media(max-width:900px){.portal .s1{top:-2%;font-size:12px}}.sticker .sic .i{width:19px;height:19px}
+.portal .s1{top:6%;left:-6%;transform:rotate(-8deg)}
+.portal .s2{bottom:12%;right:-4%;transform:rotate(6deg);background:var(--y)}
+.portal .ballspot{position:absolute;width:44%;aspect-ratio:1;left:-14%;bottom:-6%}
+.rot-text{position:absolute;inset:-34px;animation:spin 26s linear infinite;pointer-events:none}
+.rot-text text{font:800 13px Manrope;letter-spacing:.32em;fill:var(--ink)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:900px){.hero{padding-top:96px}.hero .wrap{grid-template-columns:1fr}.portal{max-width:380px;justify-self:center;margin-top:10px}.portal .s1{display:flex;align-items:center;gap:10px;white-space:nowrap}.sticker .sic{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--y);border:1.5px solid var(--ink);flex:none}@media(max-width:900px){.portal .s1{top:-2%;font-size:12px}}.sticker .sic .i{width:19px;height:19px}
+.portal .s1{left:0}.portal .s2{right:0}.rot-text{display:none}}
+
+/* ---------- marquee ---------- */
+.mq{background:var(--ink);color:var(--y);overflow:hidden;padding:20px 0;transform:rotate(-1.6deg) scale(1.02);position:relative;z-index:3}
+.mq .t{display:flex;gap:42px;white-space:nowrap;font:900 clamp(22px,3vw,38px) Unbounded;width:max-content;animation:mq 30s linear infinite}
+.mq .t span{display:flex;align-items:center;gap:42px}
+.mq .t span:after{content:'';width:.8em;height:.8em;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 11.2c-3.3 0-6.3 3.2-6.3 6 0 1.9 1.4 2.9 3.1 2.9 1.3 0 2.1-.6 3.2-.6s1.9.6 3.2.6c1.7 0 3.1-1 3.1-2.9 0-2.8-3-6-6.3-6z'/%3E%3Cellipse cx='4.6' cy='10.2' rx='2' ry='2.6'/%3E%3Cellipse cx='8.9' cy='5.6' rx='2.1' ry='2.8'/%3E%3Cellipse cx='15.1' cy='5.6' rx='2.1' ry='2.8'/%3E%3Cellipse cx='19.4' cy='10.2' rx='2' ry='2.6'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 11.2c-3.3 0-6.3 3.2-6.3 6 0 1.9 1.4 2.9 3.1 2.9 1.3 0 2.1-.6 3.2-.6s1.9.6 3.2.6c1.7 0 3.1-1 3.1-2.9 0-2.8-3-6-6.3-6z'/%3E%3Cellipse cx='4.6' cy='10.2' rx='2' ry='2.6'/%3E%3Cellipse cx='8.9' cy='5.6' rx='2.1' ry='2.8'/%3E%3Cellipse cx='15.1' cy='5.6' rx='2.1' ry='2.8'/%3E%3Cellipse cx='19.4' cy='10.2' rx='2' ry='2.6'/%3E%3C/svg%3E") center/contain no-repeat;display:inline-block;transform:rotate(18deg)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- about ---------- */
+.sec{padding:140px 0}
+.h2{font-size:clamp(34px,5vw,68px);font-weight:900;margin:22px 0 22px;line-height:1.08}
+.h2 em{font-style:normal;background:var(--y);padding:0 .14em;border-radius:.1em}
+.sub{font-size:18px;line-height:1.6;color:#3c3626;max-width:600px}
+.about .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center}
+.about .ballspot{width:min(340px,70%);aspect-ratio:1;margin:0 auto}
+.steps{display:grid;gap:18px;margin-top:38px;position:relative}
+.steps:before{content:"";position:absolute;left:39px;top:46px;bottom:46px;width:0;border-left:3px dashed #E2AE08;opacity:.9}
+.step{position:relative;display:grid;grid-template-columns:80px 1fr;gap:20px;align-items:start}
+.step .bub{position:relative;width:80px;height:80px;border-radius:50%;background:var(--y);border:2px solid var(--ink);display:grid;place-items:center;z-index:1;transition:transform .45s cubic-bezier(.3,1.6,.5,1)}
+.step .bub .i{width:34px;height:34px;stroke-width:1.7}
+.step .bub em{position:absolute;top:-6px;right:-8px;font:900 12px/1 Unbounded;font-style:normal;background:var(--ink);color:var(--y);padding:6px 8px;border-radius:99px}
+.step .card2{background:var(--paper);border:2px solid var(--ink);border-radius:24px;padding:22px 24px;box-shadow:6px 6px 0 var(--ink);transition:transform .35s cubic-bezier(.3,1.5,.5,1),box-shadow .35s}
+.step:hover .card2{transform:translate(-3px,-4px);box-shadow:10px 10px 0 var(--ink)}
+.step:hover .bub{transform:rotate(-10deg) scale(1.08)}
+.step h3{font-size:20px;margin:0 0 8px}
+.step p{color:var(--mut);line-height:1.55}
+.schips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.schips>span{display:inline-flex;align-items:center;gap:6px;font:800 12px Manrope;padding:.5em .85em;border-radius:99px;background:#F5C51833;border:1.5px solid #17130b22}
+.schips .i{width:15px;height:15px;stroke-width:2}
+@media(max-width:600px){.steps:before{left:27px}.step{grid-template-columns:56px 1fr;gap:14px}.step .bub{width:56px;height:56px}.step .bub .i{width:25px;height:25px}.step .bub em{font-size:10px;padding:5px 6px;right:-6px}.step .card2{padding:18px;border-radius:20px;box-shadow:4px 4px 0 var(--ink)}.step h3{font-size:18px}}
+@media(max-width:900px){.about .wrap{grid-template-columns:1fr}.about .ballspot{width:220px}.sec{padding:96px 0}}
+
+/* ---------- cats ---------- */
+.cats{background:var(--ink);color:var(--paper);border-radius:48px 48px 0 0;margin-top:-20px;z-index:2}
+.cats .tag{background:transparent;border-color:var(--paper);color:var(--paper)}
+.cats .sub{color:#d9cfb5}
+.cats-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px;perspective:1100px}
+.cat{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:3/4;background:#2b2518;transform-style:preserve-3d;transition:transform .15s ease-out;cursor:pointer}
+.cat:nth-child(even){margin-top:46px}
+.cat img{width:100%;height:100%;object-fit:cover;transform:scale(1.08) translateZ(0);transition:transform .6s}
+.cat:hover img{transform:scale(1.15)}
+.cat .lbl{position:absolute;left:14px;right:14px;bottom:14px;background:#fffbefee;color:var(--ink);border-radius:18px;padding:14px 16px;transform:translateZ(40px)}
+.cat .lbl h3{font-size:18px}
+.cat .lbl p{font-size:13px;color:var(--mut);margin-top:6px;line-height:1.35}
+.cat .glare{position:absolute;inset:0;background:radial-gradient(circle at var(--gx,50%) var(--gy,30%),#ffffff40,transparent 50%);pointer-events:none;opacity:0;transition:opacity .3s}
+.cat:hover .glare{opacity:1}
+.adopt{margin-top:90px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{border-radius:var(--r);padding:34px;position:relative;overflow:hidden}
+.card h3{font-size:clamp(22px,2.4vw,30px);margin-bottom:14px}
+.card p{line-height:1.6}
+.card.y{background:var(--y);color:var(--ink)}
+.card.d{background:#2b2518;color:var(--paper)}
+.card.d p{color:#d9cfb5}
+.tiers{display:grid;gap:10px;margin-top:22px}
+.tier{display:flex;justify-content:space-between;align-items:center;gap:14px;background:#17130b10;border:1.5px solid #17130b26;border-radius:16px;padding:16px 18px;font-weight:800;transition:background .25s,transform .25s}
+.tier:hover{background:var(--ink);color:var(--y);transform:scale(1.02)}
+.tier span{font:900 18px Unbounded;white-space:nowrap}.tier em{display:flex;align-items:center;gap:2px}.ti{width:38px;height:38px;border-radius:12px;background:var(--ink);color:var(--y);display:grid;place-items:center;flex:none;margin-right:10px;transition:background .25s,color .25s}.ti .i{width:20px;height:20px}.tier:hover .ti{background:var(--y);color:var(--ink)}
+.card .btn{margin-top:24px}
+@media(max-width:600px){.tier{flex-wrap:wrap;gap:6px}.tier span{font-size:16px}.card{padding:24px}}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr);gap:12px}.cat:nth-child(even){margin-top:30px}.adopt{grid-template-columns:1fr}.cat .lbl{left:8px;right:8px;bottom:8px;padding:10px 12px}.cat .lbl h3{font-size:15px}.cat .lbl p{display:none}}
+
+/* ---------- reels ring ---------- */
+.reels{background:var(--ink);color:var(--paper);overflow:hidden;z-index:2}
+.reels .pin{height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative}
+.reels .head{text-align:center;position:absolute;top:9vh;left:0;right:0;z-index:3;pointer-events:none}
+.reels .head .h2{margin:16px 0 0;font-size:clamp(28px,4vw,54px)}
+.reels .tag{background:transparent;border-color:var(--paper);color:var(--paper)}
+.stage{perspective:1600px;width:100%;height:100%;display:grid;place-items:center;margin-top:8vh}
+.ring3d{position:relative;width:var(--cw);height:calc(var(--cw)*16/9);transform-style:preserve-3d;--cw:240px}
+.rc{position:absolute;inset:0;border-radius:24px;overflow:hidden;background:#000;backface-visibility:hidden;cursor:pointer;border:2px solid #ffffff1a;box-shadow:0 30px 60px -20px #000;transition:border-color .3s,filter .3s}
+.rc video,.rc img{width:100%;height:100%;object-fit:cover}
+.rc.on{border-color:var(--y)}
+.rc:not(.on){filter:brightness(.55)}
+.rc .pl{position:absolute;left:12px;bottom:12px;background:var(--y);color:var(--ink);font:800 12px Manrope;padding:.5em .9em .5em .6em;border-radius:99px;display:inline-flex;gap:6px;align-items:center;opacity:0;transition:opacity .3s}
+.rc.on .pl{opacity:1}
+.reels .hint{position:absolute;bottom:8vh;font:700 13px Manrope;letter-spacing:.14em;text-transform:uppercase;color:#d9cfb5}
+.floor{position:absolute;bottom:0;left:0;right:0;height:40vh;background:radial-gradient(ellipse at 50% 100%,#f5c51833,transparent 60%);pointer-events:none}
+@media(max-width:700px){.ring3d{--cw:190px}}
+
+/* ---------- price ---------- */
+.price{background:var(--cream);border-radius:48px 48px 0 0;margin-top:-48px;z-index:3}
+.price .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.calc{background:var(--paper);border:2px solid var(--ink);border-radius:32px;padding:30px;box-shadow:10px 10px 0 var(--ink)}
+.calc h3{font-size:20px;margin-bottom:20px}
+.seg{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;background:#17130b0d;border-radius:16px;padding:5px;gap:5px;margin-bottom:16px}
+.seg button{border:0;background:none;padding:14px 8px;border-radius:12px;font:800 14px Manrope;cursor:pointer;color:var(--ink);transition:background .25s}
+.seg button.a{background:var(--ink);color:var(--y)}
+.row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;font-weight:700}
+.cnt{display:flex;align-items:center;gap:14px}
+.cnt button{width:42px;height:42px;border-radius:50%;border:2px solid var(--ink);background:none;font:800 20px Manrope;cursor:pointer}
+.cnt b{font:900 22px Unbounded;min-width:26px;text-align:center}
+.chk{display:flex;gap:12px;align-items:center;padding:12px 0;font-weight:700;cursor:pointer}
+.chk input{width:22px;height:22px;accent-color:#17130b}
+.chk small{display:block;color:var(--mut);font-weight:600}
+.total{margin-top:16px;border-top:2px dashed #17130b33;padding-top:20px;display:flex;justify-content:space-between;align-items:end;gap:10px}
+.total .sum{font:900 clamp(28px,3vw,40px) Unbounded;white-space:nowrap}
+.total small{color:var(--mut);font-weight:700}
+.table{margin-top:30px;border-radius:24px;overflow:hidden;border:1.5px solid #17130b22}
+.table div{display:grid;grid-template-columns:1.2fr 1fr 1fr;padding:15px 20px;font-weight:700;background:var(--paper)}
+.table div:first-child{background:var(--ink);color:var(--y);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.table div+div{border-top:1px solid #17130b14}
+.inc{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.inc>span{background:var(--y);border-radius:99px;padding:.45em 1.1em .45em .45em;font-weight:800;font-size:14px;display:inline-flex;align-items:center;gap:9px}.inc>span>.i{width:30px;height:30px;padding:6px;background:var(--ink);color:var(--y);border-radius:50%}
+.price .ballspot{position:absolute;width:150px;aspect-ratio:1;right:-30px;top:-80px}
+@media(max-width:900px){.price .wrap{grid-template-columns:1fr}.price .ballspot{width:84px;right:6px;top:-14px}.price .wrap>div:last-child{padding-top:96px}.calc{box-shadow:6px 6px 0 var(--ink)}}
+
+/* ---------- events ---------- */
+.events .wrap>.grid3{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:18px;margin-top:56px}
+.ev{border-radius:var(--r);overflow:hidden;position:relative;min-height:440px;color:var(--paper);display:flex;flex-direction:column;justify-content:end;padding:28px;background:#2b2518;isolation:isolate}
+.ev video,.ev img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%;z-index:-2;transition:transform .8s}
+.ev:hover video,.ev:hover img{transform:scale(1.06)}
+.ev:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,#17130bea);z-index:-1}
+.ev h3{font-size:24px;margin-bottom:10px}
+.ev p{color:#e9dfc5;line-height:1.5}
+.ev .chip{position:absolute;top:20px;left:20px;background:var(--y);color:var(--ink);font:800 13px Manrope;padding:.45em 1em .45em .45em;border-radius:99px;display:inline-flex;align-items:center;gap:8px}.ev .chip .i{width:28px;height:28px;padding:5px;border-radius:50%;background:var(--ink);color:var(--y)}
+.speed{font:900 54px Unbounded;color:var(--y);line-height:1}
+.speed small{font-size:16px}
+@media(max-width:900px){.events .wrap>.grid3{grid-template-columns:1fr}.ev{min-height:380px}}
+
+/* ---------- rules ---------- */
+.rules{background:var(--y);overflow:hidden;counter-reset:rl}
+.rules .bgpaw{position:absolute;color:#17130b;opacity:.07;pointer-events:none}
+.rules .bgpaw .i{width:100%;height:100%}
+.rules-head{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
+.rules-head .sub{color:#3a2f10}
+.rules .list{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:56px}
+.rule{counter-increment:rl;position:relative;background:var(--paper);border:2px solid var(--ink);border-radius:26px;padding:26px 24px 24px;box-shadow:6px 6px 0 var(--ink);transition:transform .35s cubic-bezier(.3,1.5,.5,1),box-shadow .35s;display:flex;flex-direction:column;overflow:hidden}
+.rule:hover{transform:translate(-3px,-6px) rotate(-1deg);box-shadow:10px 12px 0 var(--ink)}
+.rule:before{content:"0" counter(rl);position:absolute;top:18px;right:20px;font:900 44px/1 Unbounded;color:transparent;-webkit-text-stroke:1.5px #17130b33;transition:color .3s,-webkit-text-stroke-color .3s}
+.rule:hover:before{color:var(--y);-webkit-text-stroke-color:var(--ink)}
+.rule .ic{width:64px;height:64px;border-radius:20px;background:var(--ink);color:var(--y);display:grid;place-items:center;transition:transform .45s cubic-bezier(.3,1.6,.5,1),background .3s,color .3s;flex:none}
+.rule .ic .i{width:32px;height:32px;stroke-width:1.7}
+.rule:hover .ic{transform:rotate(-10deg) scale(1.08);background:var(--y);color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.rule h3{font-size:17px;margin:22px 0 10px;line-height:1.2}
+.rule p{color:var(--mut);line-height:1.55;font-size:15px}
+.rule .ok-tag{margin-top:auto;padding-top:18px;display:flex;align-items:center;gap:8px;font:800 12px Manrope;letter-spacing:.08em;text-transform:uppercase;color:#17130b99}
+.rule .ok-tag .i{width:18px;height:18px;color:var(--ink)}
+.rules .note{margin-top:34px;display:flex;align-items:center;gap:14px;background:var(--ink);color:var(--paper);border-radius:22px;padding:18px 22px;font-weight:700;line-height:1.45;max-width:760px}
+.rules .note .i{width:40px;height:40px;padding:9px;border-radius:50%;background:var(--y);color:var(--ink);flex:none}
+@media(max-width:900px){.rules-head{grid-template-columns:1fr;gap:0}.rules .list{grid-template-columns:1fr 1fr;gap:14px;margin-top:36px}}
+@media(max-width:600px){
+ .rules .list{grid-template-columns:1fr;gap:12px}
+ .rule{display:grid;grid-template-columns:56px 1fr;column-gap:16px;align-items:start;padding:18px 18px 18px 16px;border-radius:22px;box-shadow:4px 4px 0 var(--ink)}
+ .rule .ic{width:56px;height:56px;border-radius:17px;grid-row:span 3}
+ .rule .ic .i{width:28px;height:28px}
+ .rule:before{font-size:26px;top:14px;right:14px}
+ .rule h3{margin:4px 40px 6px 0;font-size:16px}
+ .rule p{font-size:14px}
+ .rule .ok-tag{padding-top:10px;font-size:12px}
+ .rules .note{padding:14px 16px;font-size:14px;border-radius:18px}
+}
+
+/* ---------- contact ---------- */
+.contact{background:var(--ink);color:var(--paper);padding:130px 0 90px}
+.contact .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:50px}
+.contact .tag{background:transparent;color:var(--paper);border-color:var(--paper)}
+.contact .h2{color:var(--paper)}
+.info{display:grid;gap:12px;margin-top:30px}
+.info a,.info div{display:flex;gap:16px;align-items:center;background:#2b2518;border-radius:20px;padding:18px 20px;font-weight:700;transition:background .25s}
+.info a:hover{background:#3a3220}
+.info i{width:48px;height:48px;border-radius:14px;background:var(--y);color:var(--ink);display:grid;place-items:center;font-style:normal;flex:none;transition:transform .3s}.info i .i{width:24px;height:24px}.info a:hover i{transform:rotate(-8deg)}.info a:after{content:"";margin-left:auto;width:22px;height:22px;flex:none;background:currentColor;opacity:.35;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 17 17 7M8 7h9v9' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 17 17 7M8 7h9v9' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;transition:opacity .25s,transform .25s}.info a:hover:after{opacity:1;transform:translate(2px,-2px)}
+.info small{display:block;color:#bdb39a;font-weight:600;font-size:13px;margin-bottom:3px}
+form{background:var(--paper);color:var(--ink);border-radius:32px;padding:32px;display:grid;gap:14px}
+form h3{font-size:22px}
+form label{font-weight:800;font-size:13px;display:grid;gap:7px}
+form input,form select{font:600 16px Manrope;padding:15px 16px;border-radius:14px;border:1.5px solid #17130b33;background:#fff;color:var(--ink)}
+form .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+form .btn{justify-content:center}
+.ok{display:none;background:var(--y);border-radius:16px;padding:16px;font-weight:700;line-height:1.5}
+footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:80px;padding-top:30px;border-top:1px solid #ffffff1f;color:#bdb39a;font-size:14px}
+@media(max-width:900px){.contact .wrap{grid-template-columns:1fr}form .two{grid-template-columns:1fr}}
+
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;background:#000d;z-index:80;display:none;place-items:center;padding:20px}
+.lb.on{display:grid}
+.lb video{max-height:88svh;width:auto;max-width:94vw;border-radius:20px}
+.lb button{position:absolute;top:18px;right:18px;width:52px;height:52px;border-radius:50%;border:0;background:var(--y);color:var(--ink);cursor:pointer;display:grid;place-items:center;transition:transform .3s}.lb button:hover{transform:rotate(90deg)}.lb button .i{width:24px;height:24px;stroke-width:2.4}
+
+.rv{opacity:0;transform:translateY(40px)}
+.loader{position:fixed;inset:0;background:var(--y);z-index:100;display:grid;place-items:center;transition:transform .9s cubic-bezier(.7,0,.2,1)}
+.loader.out{transform:translateY(-100%)}
+.loader .paws{display:flex;gap:14px;font-size:34px;color:var(--ink)}
+.loader .paws span{animation:pw 1s infinite both}
+.loader .paws span:nth-child(2){animation-delay:.2s}.loader .paws span:nth-child(3){animation-delay:.4s}
+@keyframes pw{0%,100%{opacity:.2;transform:translateY(0)}50%{opacity:1;transform:translateY(-10px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-paw" viewBox="0 0 24 24"><g fill="currentColor" stroke="none"><path d="M12 11.2c-3.3 0-6.3 3.2-6.3 6 0 1.9 1.4 2.9 3.1 2.9 1.3 0 2.1-.6 3.2-.6s1.9.6 3.2.6c1.7 0 3.1-1 3.1-2.9 0-2.8-3-6-6.3-6z"/><ellipse cx="4.6" cy="10.2" rx="2" ry="2.6" transform="rotate(-24 4.6 10.2)"/><ellipse cx="8.9" cy="5.6" rx="2.1" ry="2.8" transform="rotate(-8 8.9 5.6)"/><ellipse cx="15.1" cy="5.6" rx="2.1" ry="2.8" transform="rotate(8 15.1 5.6)"/><ellipse cx="19.4" cy="10.2" rx="2" ry="2.6" transform="rotate(24 19.4 10.2)"/></g></symbol>
+<symbol id="i-cat" viewBox="0 0 24 24"><path d="M5.2 9.6 4.4 3.6l5 3.1a8.4 8.4 0 0 1 5.2 0l5-3.1-.8 6A7.6 7.6 0 0 1 20 13.4c0 4-3.6 7.1-8 7.1s-8-3.1-8-7.1c0-1.4.4-2.7 1.2-3.8z"/><path d="M1.8 13.6l4 .6M1.8 16.6l4-.7M22.2 13.6l-4 .6M22.2 16.6l-4-.7"/><circle cx="9" cy="12.6" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="12.6" r="1" fill="currentColor" stroke="none"/><path d="M11 15.4h2l-1 1.1z" fill="currentColor"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.3S3.8 15.6 3.8 9.4A4.4 4.4 0 0 1 12 7a4.4 4.4 0 0 1 8.2 2.4c0 6.2-8.2 10.9-8.2 10.9z"/></symbol>
+<symbol id="i-drop" viewBox="0 0 24 24"><path d="M10.5 3.5S5 9.6 5 13.8a5.5 5.5 0 0 0 11 0c0-4.2-5.5-10.3-5.5-10.3z"/><path d="M8 14.3a2.6 2.6 0 0 0 2.5 2.6"/><circle cx="18.6" cy="5.4" r="1.9"/><circle cx="20.4" cy="10.4" r="1.1"/></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M19.6 14.8A8.2 8.2 0 1 1 9.2 4.4a6.6 6.6 0 0 0 10.4 10.4z"/><path d="M14.5 3.5h3.6l-3.6 4h3.6M19.5 9h2.2l-2.2 2.4h2.2"/></symbol>
+<symbol id="i-nofish" viewBox="0 0 24 24"><path d="M3 12c2.4-3.4 5.8-5 9.2-5 3 0 5.4 1.6 6.9 3.4L21.5 8v8l-2.4-2.4c-1.5 1.8-3.9 3.4-6.9 3.4-3.4 0-6.8-1.6-9.2-5z"/><circle cx="7.6" cy="11.4" r=".9" fill="currentColor" stroke="none"/><path d="M3.5 3.5l17 17"/></symbol>
+<symbol id="i-handheart" viewBox="0 0 24 24"><path d="M2.5 14.5h3.2l4.6 1.7c1 .3 1.4 1.3 1.1 2.1-.3.7-1 1-1.8.8l-3.2-.8"/><path d="M11 18.6l6.4-2.4c1-.4 2 .1 2.3 1 .2.7-.1 1.4-.7 1.8l-6.6 3.4-6.4-1.6H2.5"/><path d="M14.6 11.2s-4-2.3-4-5.2a2.2 2.2 0 0 1 4-1.2 2.2 2.2 0 0 1 4 1.2c0 2.9-4 5.2-4 5.2z"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.5s7-6.4 7-12a7 7 0 0 0-14 0c0 5.6 7 12 7 12z"/><circle cx="12" cy="9.5" r="2.6"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.2l3.4 2"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3.5h3.4l1.7 4.3-2.2 1.4a11.6 11.6 0 0 0 6.9 6.9l1.4-2.2 4.3 1.7V19a1.8 1.8 0 0 1-1.9 1.8A16.2 16.2 0 0 1 3.2 5.4 1.8 1.8 0 0 1 5 3.5z"/></symbol>
+<symbol id="i-tg" viewBox="0 0 24 24"><path d="M21.2 4.2 2.9 11.4c-.8.3-.8 1.1 0 1.4l4.6 1.5 1.7 5.5c.2.7 1 .9 1.5.4l2.6-2.4 4.8 3.6c.7.5 1.5.2 1.7-.7l3-14.6c.2-1.2-.6-1.8-1.6-1.4z"/><path d="M7.5 14.3 17.8 7.6l-7.6 7.7-.5 4.4"/></symbol>
+<symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-cup" viewBox="0 0 24 24"><path d="M4 9.5h12.5v4.2a5.3 5.3 0 0 1-5.3 5.3H9.3A5.3 5.3 0 0 1 4 13.7V9.5z"/><path d="M16.5 10.5h1.6a2.6 2.6 0 0 1 0 5.2h-1.9M2.8 21.5h15"/><path d="M8 2.8c-1 1 1 2.1 0 3.4M12 2.8c-1 1 1 2.1 0 3.4"/></symbol>
+<symbol id="i-dice" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><g fill="currentColor" stroke="none"><circle cx="8.4" cy="8.4" r="1.4"/><circle cx="15.6" cy="8.4" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="8.4" cy="15.6" r="1.4"/><circle cx="15.6" cy="15.6" r="1.4"/></g></symbol>
+<symbol id="i-wifi" viewBox="0 0 24 24"><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.5a9.6 9.6 0 0 1 13 0M8.6 16a5 5 0 0 1 6.8 0"/><circle cx="12" cy="19.3" r="1.3" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-timer" viewBox="0 0 24 24"><circle cx="12" cy="13.5" r="7.5"/><path d="M12 13.5V9.6M9.5 2.5h5M12 2.5V6M18.6 6.4l1.4-1.4"/></symbol>
+<symbol id="i-cake" viewBox="0 0 24 24"><path d="M4 21h16v-6.5A2.5 2.5 0 0 0 17.5 12h-11A2.5 2.5 0 0 0 4 14.5z"/><path d="M4 16.4c1.3 1 2.7 1 4 0s2.7-1 4 0 2.7 1 4 0 2.7-1 4 0M8 12V9.4M12 12V9.4M16 12V9.4M2.5 21h19"/><path d="M8 4.2c.8.9.8 1.8 0 2.6-.8-.8-.8-1.7 0-2.6zM12 4.2c.8.9.8 1.8 0 2.6-.8-.8-.8-1.7 0-2.6zM16 4.2c.8.9.8 1.8 0 2.6-.8-.8-.8-1.7 0-2.6z" fill="currentColor"/></symbol>
+<symbol id="i-laptop" viewBox="0 0 24 24"><rect x="4.5" y="4.5" width="15" height="10.5" rx="1.6"/><path d="M2.2 19.5h19.6l-1.6-3H3.8z"/><path d="M10.5 9.8l1.2 1.2 2.4-2.6"/></symbol>
+<symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.6v14.8c0 .8.9 1.3 1.6.9l11.6-7.4c.6-.4.6-1.4 0-1.8L8.6 3.7C7.9 3.3 7 3.8 7 4.6z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3 10.5 13.5M21 3l-6.6 18-3.9-7.5L3 9.6z"/></symbol>
+<symbol id="lc" viewBox="-24 -34 48 48" overflow="visible"><path d="M-19 12V2c0-6 2.6-11 5.4-14L-15.6-29-2-19.6c1.3-.3 2.7-.3 4 0L15.6-29l-2 17c2.8 3 5.4 8 5.4 14v10z"/><path d="M-12.6-16.2-13.7-24.6-6.5-19.6zM12.6-16.2l1.1-8.4-7.2 5z" fill="#F4A9B4" stroke="none"/><ellipse cx="-7.2" cy="-3.4" rx="2.3" ry="3" style="fill:var(--eye,#17130B)" stroke="none"/><ellipse cx="7.2" cy="-3.4" rx="2.3" ry="3" style="fill:var(--eye,#17130B)" stroke="none"/><circle cx="-6.4" cy="-4.6" r=".9" fill="#fff" stroke="none"/><circle cx="8" cy="-4.6" r=".9" fill="#fff" stroke="none"/><path d="M-1.8 1.6h3.6L0 3.6z" fill="#E8798A" stroke="none"/><path d="M-3.4 4.6q1.7 1.8 3.4 0 1.7 1.8 3.4 0" fill="none" stroke-width="1.3"/><ellipse cx="-12" cy="2.6" rx="3" ry="1.8" fill="#F7A8B3" opacity=".6" stroke="none"/><ellipse cx="12" cy="2.6" rx="3" ry="1.8" fill="#F7A8B3" opacity=".6" stroke="none"/></symbol>
+</defs></svg>
+<div class="loader" id="loader"><div class="paws"><span><svg class="i "><use href="#i-paw"/></svg></span><span><svg class="i "><use href="#i-paw"/></svg></span><span><svg class="i "><use href="#i-paw"/></svg></span></div></div>
+<canvas id="gl"></canvas>
+
+<nav id="nav"><div class="wrap">
+  <a href="#top" class="logo"><svg class="logo-svg" viewBox="0 0 244 112" role="img" aria-label="Cats &amp; Friends"><g stroke="#17130B" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round">
+<use href="#lc" x="38" y="22" width="48" height="48" fill="#FFFFFF"/>
+<use href="#lc" x="74" y="18" width="48" height="48" fill="#E9E4DA"/>
+<use href="#lc" x="112" y="16" width="48" height="48" fill="#6F6B74" style="--eye:#FFD84A"/>
+<use href="#lc" x="150" y="21" width="48" height="48" fill="#F3DFC1"/>
+<path d="M30 66 3 68l10 13.5L3 96h29z" fill="#D9A100"/><path d="M214 66l27 2-10 13.5L241 96h-29z" fill="#D9A100"/>
+<path d="M20 62Q122 52 224 62v31Q122 83 20 93z" fill="#F5C518"/>
+<path d="M20 93l12 3V89zM224 93l-12 3V89z" fill="#8C6A00"/>
+<ellipse cx="53" cy="61" rx="5.2" ry="3.6" fill="#fff"/><ellipse cx="71" cy="59.5" rx="5.2" ry="3.6" fill="#fff"/><ellipse cx="127" cy="56" rx="5.2" ry="3.6" fill="#6F6B74"/><ellipse cx="145" cy="56" rx="5.2" ry="3.6" fill="#6F6B74"/><ellipse cx="183" cy="58.5" rx="5.2" ry="3.6" fill="#F3DFC1"/>
+</g>
+<defs><path id="lcp" d="M24 82Q122 72 220 82"/><path id="lcp2" d="M70 89.5Q122 83 174 89.5"/></defs>
+<text font-family="Unbounded,sans-serif" font-weight="900" font-size="17" fill="#17130B" text-anchor="middle"><textPath href="#lcp" startOffset="50%" textLength="178" lengthAdjust="spacingAndGlyphs">CATS&amp;FRIENDS</textPath></text>
+<text font-family="Manrope,sans-serif" font-weight="800" font-size="6.2" letter-spacing="1.4" fill="#17130B" text-anchor="middle"><textPath href="#lcp2" startOffset="50%" textLength="96" lengthAdjust="spacing">COWORKING · ANTI CAFE</textPath></text>
+</svg></a>
+  <ul>
+    <li><a href="#kotiki"><span class="ru">Котики</span><span class="uz">Mushuklar</span></a></li>
+    <li><a href="#reels">Reels</a></li>
+    <li><a href="#prays"><span class="ru">Цены</span><span class="uz">Narxlar</span></a></li>
+    <li><a href="#sobytiya"><span class="ru">Праздники</span><span class="uz">Bayramlar</span></a></li>
+    <li><a href="#kontakt"><span class="ru">Контакты</span><span class="uz">Aloqa</span></a></li>
+  </ul>
+  <div class="lang"><button data-l="ru">RU</button><button data-l="uz">UZ</button></div>
+  <a href="tel:+998770037553" class="btn y" aria-label="Позвонить"><span class="num">+998 77 003 75 53</span><svg class="i "><use href="#i-phone"/></svg></a>
+</div></nav>
+
+<!-- HERO -->
+<section class="hero" id="top"><div class="wrap">
+  <div>
+    <span class="tag"><i></i><span class="ru">Первое кото-кафе в Узбекистане</span><span class="uz">O‘zbekistondagi birinchi koto-kafe</span></span>
+    <h1>
+      <span class="ln"><span class="ru">Чай, кофе</span><span class="uz">Choy, qahva</span></span>
+      <span class="ln"><span><span class="ru">и&nbsp;</span><span class="uz">va&nbsp;</span><span class="hl"><span class="ru">мурчание</span><span class="uz">mur-mur</span></span></span></span>
+      <span class="ln"><span class="ru">рядом</span><span class="uz">yoningizda</span></span>
+    </h1>
+    <p class="lead"><span class="ru">Приходите погладить котиков, поиграть в настолки, поработать под мурлыканье или отметить день рождения. Чай, кофе и быстрый интернет — уже включены во вход.</span><span class="uz">Mushuklarni silash, stol o‘yinlari o‘ynash, mur-mur ostida ishlash yoki tug‘ilgan kunni nishonlash uchun keling. Choy, qahva va tez internet — kirish narxiga kiritilgan.</span></p>
+    <div class="cta">
+      <a href="#prays" class="btn y"><span class="ru">Рассчитать визит</span><span class="uz">Tashrifni hisoblash</span><svg class="i ar"><use href="#i-arrow"/></svg></a>
+      <a href="#kontakt" class="btn o"><span class="ru">Как добраться</span><span class="uz">Qanday borish</span></a>
+    </div>
+    <div class="meta">
+      <div><svg class="i "><use href="#i-clock"/></svg><span class="ru">Каждый день 10:00–22:00</span><span class="uz">Har kuni 10:00–22:00</span></div>
+      <div><svg class="i "><use href="#i-pin"/></svg><span class="ru">Чиланзар, 3 квартал, 23</span><span class="uz">Chilonzor, 3-kvartal, 23-uy</span></div>
+    </div>
+  </div>
+  <div class="portal">
+    <svg class="rot-text" viewBox="0 0 200 200"><defs><path id="cp" d="M100,100 m-92,0 a92,92 0 1,1 184,0 a92,92 0 1,1 -184,0"/></defs><text><textPath href="#cp">CATS &amp; FRIENDS · КОТО-КАФЕ · TASHKENT · CATS &amp; FRIENDS · КОТО-КАФЕ · </textPath></text></svg>
+    <div class="ring"><video src="assets/v/hero.mp4" poster="assets/p/kot-tabby.jpg" autoplay muted loop playsinline></video></div>
+    <div class="sticker s1"><span class="sic"><svg class="i "><use href="#i-cat"/></svg></span><span class="ru">Суют нос<br>в ваши дела</span><span class="uz">Ishingizga<br>burun suqadi</span></div>
+    <div class="ballspot" data-ball="1.15"></div>
+  </div>
+</div></section>
+
+<div class="lane" style="position:relative;transform:rotate(-1.6deg);top:0"><div class="walker " style="--dur:24s;--del:-4s" data-paw=""><svg class="wc" viewBox="0 0 140 92" aria-hidden="true"><g class="bd">
+<path class="tl" d="M33 44C16 43 8 30 13 15c1.5-4 6-3.5 5.6.6-1.6 9 2.6 18.5 15.4 21.6z" fill="#17130B"/>
+<rect class="lg f2" x="39" y="47" width="8" height="33" rx="4" fill="#3b3428"/><rect class="lg f1" x="83" y="47" width="8" height="33" rx="4" fill="#3b3428"/>
+<ellipse cx="63" cy="46" rx="35" ry="15.5" fill="#17130B"/>
+<rect class="lg f1" x="46" y="48" width="8" height="33" rx="4" fill="#17130B"/><rect class="lg f2" x="90" y="48" width="8" height="33" rx="4" fill="#17130B"/>
+<g class="hd"><path d="M88 22 90 4l11 11M112 15l9-11 1 18" fill="#17130B"/><circle cx="105" cy="30" r="16" fill="#17130B"/><path d="M92 9.5l1 7 5-4zM118.5 9l-.6 7-4.6-3.6z" fill="#F4A9B4"/>
+<ellipse class="ey" cx="111" cy="27.5" rx="2.6" ry="3.2" fill="#F5C518"/><ellipse class="ey" cx="101" cy="27.5" rx="2.6" ry="3.2" fill="#F5C518"/><path d="M118 34.5l2.8-.6-1.2 2.2z" fill="#F4A9B4"/>
+<path d="M114 37l13-2M114 39.5l12.5 1" stroke="#17130B" stroke-width="1" opacity=".55"/></g></g></svg></div></div>
+<div class="mq"><div class="t">
+  <span class="ru">Котики</span><span class="ru">Настолки</span><span class="ru">Коворкинг</span><span class="ru">Дни рождения</span><span class="ru">Пристройство</span><span class="ru">Котики</span><span class="ru">Настолки</span><span class="ru">Коворкинг</span><span class="ru">Дни рождения</span><span class="ru">Пристройство</span>
+  <span class="uz">Mushuklar</span><span class="uz">Stol o‘yinlari</span><span class="uz">Kovorking</span><span class="uz">Tug‘ilgan kun</span><span class="uz">Asrab olish</span><span class="uz">Mushuklar</span><span class="uz">Stol o‘yinlari</span><span class="uz">Kovorking</span><span class="uz">Tug‘ilgan kun</span><span class="uz">Asrab olish</span>
+</div></div>
+
+<!-- ABOUT -->
+<section class="sec about"><div class="wrap">
+  <div class="ballspot" data-ball="1"></div>
+  <div>
+    <span class="tag"><i></i><span class="ru">Как это работает</span><span class="uz">Qanday ishlaydi</span></span>
+    <h2 class="h2 rv"><span class="ru">Платите за <em>время</em>, а не за меню</span><span class="uz"><em>Vaqt</em> uchun to‘laysiz, menyu uchun emas</span></h2>
+    <p class="sub rv"><span class="ru">Cats &amp; Friends — уютный дом для пушистых, куда можно прийти в любой день. Почти как в гости к друзьям, только друзья мурчат.</span><span class="uz">Cats &amp; Friends — momiq do‘stlar uchun shinam uy, bu yerga istalgan kuni kelishingiz mumkin. Do‘stlarnikiga mehmonga borgandek, faqat do‘stlar mur-mur qiladi.</span></p>
+    <div class="steps">
+      <div class="step rv"><div class="bub"><svg class="i"><use href="#i-pin"/></svg><em>01</em></div><div class="card2"><h3><span class="ru">Приходите</span><span class="uz">Keling</span></h3><p><span class="ru">Без записи, каждый день с 10:00 до 22:00. Для компании и праздников лучше забронировать.</span><span class="uz">Oldindan yozilmasdan, har kuni 10:00 dan 22:00 gacha. Kompaniya va bayramlar uchun bron qilgan ma’qul.</span></p><div class="schips"><span><svg class="i"><use href="#i-clock"/></svg><span class="ru">10:00 – 22:00</span><span class="uz">10:00 – 22:00</span></span><span><svg class="i"><use href="#i-pin"/></svg><span class="ru">Чиланзар, 3 кв.</span><span class="uz">Chilonzor, 3-kv.</span></span></div></div></div>
+      <div class="step rv"><div class="bub"><svg class="i"><use href="#i-timer"/></svg><em>02</em></div><div class="card2"><h3><span class="ru">Выбирайте время</span><span class="uz">Vaqtni tanlang</span></h3><p><span class="ru">20, 40 или 60 минут. Продление — со скидкой 50%.</span><span class="uz">20, 40 yoki 60 daqiqa. Uzaytirish — 50% chegirma bilan.</span></p><div class="schips"><span><svg class="i"><use href="#i-timer"/></svg><span class="ru">от 35 000 сум</span><span class="uz">35 000 so‘mdan</span></span><span><svg class="i"><use href="#i-heart"/></svg><span class="ru">−50% на продление</span><span class="uz">uzaytirish −50%</span></span></div></div></div>
+      <div class="step rv"><div class="bub"><svg class="i"><use href="#i-cup"/></svg><em>03</em></div><div class="card2"><h3><span class="ru">Мурчите вместе</span><span class="uz">Birga dam oling</span></h3><p><span class="ru">Чай и кофе, настольные игры и быстрый Wi-Fi — уже включены.</span><span class="uz">Choy va qahva, stol o‘yinlari va tez Wi-Fi — narxga kiritilgan.</span></p><div class="schips"><span><svg class="i"><use href="#i-cup"/></svg><span class="ru">чай · кофе</span><span class="uz">choy · qahva</span></span><span><svg class="i"><use href="#i-dice"/></svg><span class="ru">настолки</span><span class="uz">stol o‘yinlari</span></span><span><svg class="i"><use href="#i-wifi"/></svg><span class="ru">Wi-Fi</span><span class="uz">Wi-Fi</span></span></div></div></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- CATS -->
+<section class="sec cats" id="kotiki"><div class="lane" ><div class="walker rev" style="--dur:30s;--del:-12s" data-paw=""><svg class="wc" viewBox="0 0 140 92" aria-hidden="true"><g class="bd">
+<path class="tl" d="M33 44C16 43 8 30 13 15c1.5-4 6-3.5 5.6.6-1.6 9 2.6 18.5 15.4 21.6z" fill="#17130B"/>
+<rect class="lg f2" x="39" y="47" width="8" height="33" rx="4" fill="#3b3428"/><rect class="lg f1" x="83" y="47" width="8" height="33" rx="4" fill="#3b3428"/>
+<ellipse cx="63" cy="46" rx="35" ry="15.5" fill="#17130B"/>
+<rect class="lg f1" x="46" y="48" width="8" height="33" rx="4" fill="#17130B"/><rect class="lg f2" x="90" y="48" width="8" height="33" rx="4" fill="#17130B"/>
+<g class="hd"><path d="M88 22 90 4l11 11M112 15l9-11 1 18" fill="#17130B"/><circle cx="105" cy="30" r="16" fill="#17130B"/><path d="M92 9.5l1 7 5-4zM118.5 9l-.6 7-4.6-3.6z" fill="#F4A9B4"/>
+<ellipse class="ey" cx="111" cy="27.5" rx="2.6" ry="3.2" fill="#F5C518"/><ellipse class="ey" cx="101" cy="27.5" rx="2.6" ry="3.2" fill="#F5C518"/><path d="M118 34.5l2.8-.6-1.2 2.2z" fill="#F4A9B4"/>
+<path d="M114 37l13-2M114 39.5l12.5 1" stroke="#17130B" stroke-width="1" opacity=".55"/></g></g></svg></div></div><div class="wrap">
+  <div class="cats-head">
+    <div>
+      <span class="tag"><i></i><span class="ru">Наши котики</span><span class="uz">Bizning mushuklar</span></span>
+      <h2 class="h2 rv"><span class="ru">Познакомьтесь<br>с хозяевами</span><span class="uz">Uy egalari<br>bilan tanishing</span></h2>
+    </div>
+    <p class="sub rv"><span class="ru">Каждый со своим характером: кто-то суёт нос в чужие дела, кто-то спит на подоконнике с утра до вечера.</span><span class="uz">Har birining o‘z fe’li bor: kimdir boshqalarning ishiga burun suqadi, kimdir ertalabdan kechgacha deraza tokchasida uxlaydi.</span></p>
+  </div>
+  <div class="grid" id="catGrid"></div>
+
+  <div class="adopt">
+    <div class="card y rv">
+      <span class="tag"><i></i><span class="ru">Виртуальное усыновление</span><span class="uz">Virtual homiylik</span></span>
+      <h3 style="margin-top:20px"><span class="ru">Станьте «своим человеком» для котика</span><span class="uz">Mushukning «o‘z odami» bo‘ling</span></h3>
+      <p><span class="ru">Выберите подопечного, помогайте ежемесячно с кормом, уходом и лечением — и получайте его фото и видео, персональный сертификат и бонусы по тарифу.</span><span class="uz">Homiylikka mushuk tanlang, har oy ozuqa, parvarish va davolashga yordam bering — evaziga uning foto va videolari, shaxsiy sertifikat va tarifga ko‘ra bonuslar olasiz.</span></p>
+      <div class="tiers">
+        <div class="tier"><em style="font-style:normal"><b class="ti"><svg class="i "><use href="#i-cat"/></svg></b>«<span class="ru">Дружок</span><span class="uz">Do‘stcha</span>»</em><span>200 000 <small class="ru">сум/мес</small><small class="uz">so‘m/oy</small></span></div>
+        <div class="tier"><em style="font-style:normal"><b class="ti"><svg class="i "><use href="#i-paw"/></svg></b>«<span class="ru">Лучший друг</span><span class="uz">Eng yaqin do‘st</span>»</em><span>350 000 <small class="ru">сум/мес</small><small class="uz">so‘m/oy</small></span></div>
+        <div class="tier"><em style="font-style:normal"><b class="ti"><svg class="i "><use href="#i-heart"/></svg></b>«<span class="ru">Хранитель счастья</span><span class="uz">Baxt qo‘riqchisi</span>»</em><span>520 000 <small class="ru">сум/мес</small><small class="uz">so‘m/oy</small></span></div>
+      </div>
+      <a class="btn" href="https://instagram.com/catsandfriends.uz" target="_blank" rel="noopener"><span class="ru">Выбрать подопечного в Директ</span><span class="uz">Direct’da mushuk tanlash</span><svg class="i ar"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="card d rv">
+      <span class="tag" style="border-color:#fffbef;color:#fffbef;background:transparent"><i></i><span class="ru">Пристройство</span><span class="uz">Uyga berish</span></span>
+      <h3 style="margin-top:20px"><span class="ru">Любовь с первого «мяу»</span><span class="uz">Birinchi «miyov»dan sevgi</span></h3>
+      <p><span class="ru">Давно мечтаете о пушистом друге? Некоторые наши котики ищут дом. Познакомьтесь вживую, проведите вместе время — и, возможно, уйдёте домой уже вдвоём.</span><span class="uz">Momiq do‘st haqida orzu qilasizmi? Ba’zi mushuklarimiz uy qidiryapti. Ular bilan tanishing, birga vaqt o‘tkazing — balki uyga ikki kishi bo‘lib qaytasiz.</span></p>
+      <video src="assets/v/room.mp4" autoplay muted loop playsinline style="border-radius:20px;margin-top:24px;aspect-ratio:16/10;object-fit:cover;width:100%"></video>
+      <a class="btn y" href="tel:+998770037553"><span class="ru">Узнать, кто ищет дом</span><span class="uz">Kim uy qidirayotganini bilish</span><svg class="i ar"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</div></section>
+
+<!-- REELS 3D RING -->
+<section class="reels" id="reels"><div class="pin">
+  <div class="head"><span class="tag"><i></i>Instagram · @catsandfriends.uz</span><h2 class="h2"><span class="ru">Жизнь кото-кафе</span><span class="uz">Koto-kafe hayoti</span></h2></div>
+  <div class="stage"><div class="ring3d" id="ring"></div></div>
+  <div class="floor"></div>
+  <div class="hint"><span class="ru">Листайте — кольцо вращается · нажмите, чтобы смотреть со звуком</span><span class="uz">Aylantiring — halqa buriladi · ovoz bilan ko‘rish uchun bosing</span></div>
+</div></section>
+
+<!-- PRICE -->
+<section class="sec price" id="prays"><div class="wrap">
+  <div>
+    <span class="tag"><i></i><span class="ru">Прайс · за 1 человека</span><span class="uz">Narxlar · 1 kishi uchun</span></span>
+    <h2 class="h2 rv"><span class="ru">Чем дольше —<br>тем <em>мурчательнее</em></span><span class="uz">Qancha uzoq —<br>shuncha <em>maroqli</em></span></h2>
+    <div class="table rv">
+      <div><span class="ru">Время</span><span class="uz">Vaqt</span><span>Пн–Пт</span><span class="ru">Сб–Вс</span><span class="uz">Sh–Ya</span></div>
+      <div><span>20 <span class="ru">мин</span><span class="uz">daq</span></span><span>35 000</span><span>45 000</span></div>
+      <div><span>40 <span class="ru">мин</span><span class="uz">daq</span></span><span>50 000</span><span>60 000</span></div>
+      <div><span>60 <span class="ru">мин</span><span class="uz">daq</span></span><span>70 000</span><span>90 000</span></div>
+    </div>
+    <div class="inc rv"><span><svg class="i "><use href="#i-cup"/></svg><span class="ru">Чай и кофе</span><span class="uz">Choy va qahva</span></span><span><svg class="i "><use href="#i-dice"/></svg><span class="ru">Настолки</span><span class="uz">Stol o‘yinlari</span></span><span><svg class="i "><use href="#i-wifi"/></svg><span class="ru">Быстрый Wi-Fi</span><span class="uz">Tez Wi-Fi</span></span><span><svg class="i "><use href="#i-timer"/></svg><span class="ru">Продление −50%</span><span class="uz">Uzaytirish −50%</span></span></div>
+  </div>
+  <div style="position:relative">
+    <div class="ballspot" data-ball=".9"></div>
+    <div class="calc rv" style="position:relative"><div class="lane" ><div class="walker " style="--dur:14s;--del:-3s" data-paw=""><svg class="wc" viewBox="0 0 140 92" aria-hidden="true"><g class="bd">
+<path class="tl" d="M33 44C16 43 8 30 13 15c1.5-4 6-3.5 5.6.6-1.6 9 2.6 18.5 15.4 21.6z" fill="#17130B"/>
+<rect class="lg f2" x="39" y="47" width="8" height="33" rx="4" fill="#3b3428"/><rect class="lg f1" x="83" y="47" width="8" height="33" rx="4" fill="#3b3428"/>
+<ellipse cx="63" cy="46" rx="35" ry="15.5" fill="#17130B"/>
+<rect class="lg f1" x="46" y="48" width="8" height="33" rx="4" fill="#17130B"/><rect class="lg f2" x="90" y="48" width="8" height="33" rx="4" fill="#17130B"/>
+<g class="hd"><path d="M88 22 90 4l11 11M112 15l9-11 1 18" fill="#17130B"/><circle cx="105" cy="30" r="16" fill="#17130B"/><path d="M92 9.5l1 7 5-4zM118.5 9l-.6 7-4.6-3.6z" fill="#F4A9B4"/>
+<ellipse class="ey" cx="111" cy="27.5" rx="2.6" ry="3.2" fill="#F5C518"/><ellipse class="ey" cx="101" cy="27.5" rx="2.6" ry="3.2" fill="#F5C518"/><path d="M118 34.5l2.8-.6-1.2 2.2z" fill="#F4A9B4"/>
+<path d="M114 37l13-2M114 39.5l12.5 1" stroke="#17130B" stroke-width="1" opacity=".55"/></g></g></svg></div></div>
+      <h3><span class="ru">Калькулятор визита</span><span class="uz">Tashrif kalkulyatori</span></h3>
+      <div class="seg" id="sDay"><button class="a" data-v="w"><span class="ru">Будни</span><span class="uz">Ish kunlari</span></button><button data-v="h"><span class="ru">Выходные</span><span class="uz">Dam olish</span></button></div>
+      <div class="seg" id="sTime"><button data-v="20">20 <span class="ru">мин</span><span class="uz">daq</span></button><button class="a" data-v="40">40 <span class="ru">мин</span><span class="uz">daq</span></button><button data-v="60">60 <span class="ru">мин</span><span class="uz">daq</span></button></div>
+      <div class="row"><span class="ru">Сколько гостей</span><span class="uz">Mehmonlar soni</span><div class="cnt"><button id="mn">−</button><b id="ppl">2</b><button id="pl">+</button></div></div>
+      <label class="chk"><input type="checkbox" id="ext"><span><span class="ru">Продлить на 20 минут</span><span class="uz">20 daqiqaga uzaytirish</span><small class="ru">со скидкой 50%</small><small class="uz">50% chegirma bilan</small></span></label>
+      <div class="total"><div><small class="ru">Итого</small><small class="uz">Jami</small><div class="sum" id="sum">0</div></div><small id="per"></small></div>
+      <a href="#kontakt" class="btn y" style="width:100%;justify-content:center;margin-top:18px"><span class="ru">Забронировать столик</span><span class="uz">Stol bron qilish</span></a>
+    </div>
+  </div>
+</div></section>
+
+<!-- EVENTS -->
+<section class="sec events" id="sobytiya"><div class="wrap">
+  <span class="tag"><i></i><span class="ru">Не только чай</span><span class="uz">Faqat choy emas</span></span>
+  <h2 class="h2 rv"><span class="ru">Праздники, работа<br>и <em>игры</em></span><span class="uz">Bayram, ish<br>va <em>o‘yinlar</em></span></h2>
+  <div class="grid3">
+    <div class="ev rv"><video data-src="assets/v/r-De6PQtEtegz.mp4" poster="assets/p/r-De6PQtEtegz.jpg" muted loop playsinline></video><span class="chip"><svg class="i "><use href="#i-cake"/></svg><span class="ru">День рождения</span><span class="uz">Tug‘ilgan kun</span></span><h3><span class="ru">Праздник с пушистыми гостями</span><span class="uz">Momiq mehmonlar bilan bayram</span></h3><p><span class="ru">Детские и взрослые дни рождения: поможем организовать праздник, который запомнится надолго.</span><span class="uz">Bolalar va kattalar tug‘ilgan kuni: uzoq esda qoladigan bayramni tashkil qilishga yordam beramiz.</span></p></div>
+    <div class="ev rv"><video data-src="assets/v/r-DerLkDgoG1y.mp4" poster="assets/p/r-DerLkDgoG1y.jpg" muted loop playsinline></video><span class="chip"><svg class="i "><use href="#i-laptop"/></svg><span class="ru">Коворкинг</span><span class="uz">Kovorking</span></span><div class="speed">888<small> <span class="ru">Мбит/с</span><span class="uz">Mbit/s</span></small></div><h3 style="margin-top:12px"><span class="ru">Работа под мурчание</span><span class="uz">Mur-mur ostida ish</span></h3><p><span class="ru">Ноутбук, чай и кот на клавиатуре. Интернет — мега хороший (проверили спидтестом).</span><span class="uz">Noutbuk, choy va klaviaturada mushuk. Internet — juda tez (speedtest bilan tekshirilgan).</span></p></div>
+    <div class="ev rv"><img src="assets/p/zal.jpg" alt=""><span class="chip"><svg class="i "><use href="#i-dice"/></svg><span class="ru">Настолки</span><span class="uz">Stol o‘yinlari</span></span><h3><span class="ru">Игры для всей компании</span><span class="uz">Butun kompaniya uchun o‘yinlar</span></h3><p><span class="ru">Настольные игры включены во вход. Главное — не давать котикам ходить за вас.</span><span class="uz">Stol o‘yinlari kirish narxiga kiritilgan. Asosiysi — mushuklarga siz uchun yurish qilishga yo‘l qo‘ymang.</span></p></div>
+  </div>
+</div></section>
+
+<!-- RULES -->
+<section class="sec rules"><div class="lane" ><div class="walker rev" style="--dur:22s;--del:-7s" data-paw=""><svg class="wc" viewBox="0 0 140 92" aria-hidden="true"><g class="bd">
+<path class="tl" d="M33 44C16 43 8 30 13 15c1.5-4 6-3.5 5.6.6-1.6 9 2.6 18.5 15.4 21.6z" fill="#17130B"/>
+<rect class="lg f2" x="39" y="47" width="8" height="33" rx="4" fill="#3b3428"/><rect class="lg f1" x="83" y="47" width="8" height="33" rx="4" fill="#3b3428"/>
+<ellipse cx="63" cy="46" rx="35" ry="15.5" fill="#17130B"/>
+<rect class="lg f1" x="46" y="48" width="8" height="33" rx="4" fill="#17130B"/><rect class="lg f2" x="90" y="48" width="8" height="33" rx="4" fill="#17130B"/>
+<g class="hd"><path d="M88 22 90 4l11 11M112 15l9-11 1 18" fill="#17130B"/><circle cx="105" cy="30" r="16" fill="#17130B"/><path d="M92 9.5l1 7 5-4zM118.5 9l-.6 7-4.6-3.6z" fill="#F4A9B4"/>
+<ellipse class="ey" cx="111" cy="27.5" rx="2.6" ry="3.2" fill="#F5C518"/><ellipse class="ey" cx="101" cy="27.5" rx="2.6" ry="3.2" fill="#F5C518"/><path d="M118 34.5l2.8-.6-1.2 2.2z" fill="#F4A9B4"/>
+<path d="M114 37l13-2M114 39.5l12.5 1" stroke="#17130B" stroke-width="1" opacity=".55"/></g></g></svg></div></div>
+<div class="bgpaw" style="width:220px;height:220px;top:60px;right:-40px;transform:rotate(24deg)"><svg class="i"><use href="#i-paw"/></svg></div>
+<div class="bgpaw" style="width:140px;height:140px;bottom:40px;left:-30px;transform:rotate(-18deg)"><svg class="i"><use href="#i-paw"/></svg></div>
+<div class="wrap">
+  <div class="rules-head">
+    <div>
+      <span class="tag"><i></i><span class="ru">Правила дома</span><span class="uz">Uy qoidalari</span></span>
+      <h2 class="h2 rv"><span class="ru">Котики здесь — <em style="background:var(--ink);color:var(--y)">хозяева</em></span><span class="uz">Bu yerda mushuklar — <em style="background:var(--ink);color:var(--y)">uy egasi</em></span></h2>
+    </div>
+    <p class="sub rv"><span class="ru">Четыре простых правила, чтобы котикам было спокойно, а вам — уютно. Администратор всегда подскажет, кто сегодня в настроении поиграть.</span><span class="uz">Mushuklar xotirjam, sizga esa shinam bo‘lishi uchun to‘rtta oddiy qoida. Bugun kim o‘ynashga kayfiyati borligini administrator doim aytib beradi.</span></p>
+  </div>
+  <div class="list">
+    <div class="rule rv"><div class="ic"><svg class="i "><use href="#i-drop"/></svg></div><h3><span class="ru">Чистые руки</span><span class="uz">Toza qo‘llar</span></h3><p><span class="ru">Моем руки перед встречей с котиками.</span><span class="uz">Mushuklar bilan uchrashishdan oldin qo‘l yuvamiz.</span></p><div class="ok-tag"><svg class="i"><use href="#i-drop"/></svg><span class="ru">Гигиена</span><span class="uz">Gigiyena</span></div></div>
+    <div class="rule rv"><div class="ic"><svg class="i "><use href="#i-moon"/></svg></div><h3><span class="ru">Не будим спящих</span><span class="uz">Uxlayotganni uyg‘otmaymiz</span></h3><p><span class="ru">Котик спит — значит, ему так хорошо. Подождите, пока проснётся.</span><span class="uz">Mushuk uxlayapti — demak, unga yaxshi. Uyg‘onguncha kuting.</span></p><div class="ok-tag"><svg class="i"><use href="#i-moon"/></svg><span class="ru">Тишина</span><span class="uz">Sokinlik</span></div></div>
+    <div class="rule rv"><div class="ic"><svg class="i "><use href="#i-nofish"/></svg></div><h3><span class="ru">Не кормим своим</span><span class="uz">O‘zimiznikidan bermaymiz</span></h3><p><span class="ru">У котиков своё меню — его составляют специалисты.</span><span class="uz">Mushuklarning o‘z menyusi bor — uni mutaxassislar tuzadi.</span></p><div class="ok-tag"><svg class="i"><use href="#i-heart"/></svg><span class="ru">Здоровье</span><span class="uz">Sog‘liq</span></div></div>
+    <div class="rule rv"><div class="ic"><svg class="i "><use href="#i-handheart"/></svg></div><h3><span class="ru">Нежно и без рук</span><span class="uz">Muloyim va majburlamay</span></h3><p><span class="ru">Не берём на руки без разрешения — котик сам решит, к кому прийти.</span><span class="uz">Ruxsatsiz qo‘lga olmaymiz — mushuk kimning yoniga borishni o‘zi hal qiladi.</span></p><div class="ok-tag"><svg class="i"><use href="#i-paw"/></svg><span class="ru">Доверие</span><span class="uz">Ishonch</span></div></div>
+  </div>
+  <div class="note rv"><svg class="i"><use href="#i-heart"/></svg><span><span class="ru">Котик сам выбирает, к кому прийти. Просто присядьте, протяните руку — и подождите немного.</span><span class="uz">Mushuk kimning yoniga borishni o‘zi tanlaydi. Shunchaki o‘tiring, qo‘lingizni cho‘zing — va biroz kuting.</span></span></div>
+</div></section>
+
+<!-- CONTACT -->
+<section class="contact" id="kontakt" style="position:relative"><div class="lane" ><div class="walker " style="--dur:28s;--del:-15s" data-paw=""><svg class="wc" viewBox="0 0 140 92" aria-hidden="true"><g class="bd">
+<path class="tl" d="M33 44C16 43 8 30 13 15c1.5-4 6-3.5 5.6.6-1.6 9 2.6 18.5 15.4 21.6z" fill="#17130B"/>
+<rect class="lg f2" x="39" y="47" width="8" height="33" rx="4" fill="#3b3428"/><rect class="lg f1" x="83" y="47" width="8" height="33" rx="4" fill="#3b3428"/>
+<ellipse cx="63" cy="46" rx="35" ry="15.5" fill="#17130B"/>
+<rect class="lg f1" x="46" y="48" width="8" height="33" rx="4" fill="#17130B"/><rect class="lg f2" x="90" y="48" width="8" height="33" rx="4" fill="#17130B"/>
+<g class="hd"><path d="M88 22 90 4l11 11M112 15l9-11 1 18" fill="#17130B"/><circle cx="105" cy="30" r="16" fill="#17130B"/><path d="M92 9.5l1 7 5-4zM118.5 9l-.6 7-4.6-3.6z" fill="#F4A9B4"/>
+<ellipse class="ey" cx="111" cy="27.5" rx="2.6" ry="3.2" fill="#F5C518"/><ellipse class="ey" cx="101" cy="27.5" rx="2.6" ry="3.2" fill="#F5C518"/><path d="M118 34.5l2.8-.6-1.2 2.2z" fill="#F4A9B4"/>
+<path d="M114 37l13-2M114 39.5l12.5 1" stroke="#17130B" stroke-width="1" opacity=".55"/></g></g></svg></div></div><div class="wrap">
+  <div>
+    <span class="tag"><i></i><span class="ru">Ждём в гости</span><span class="uz">Mehmonga kutamiz</span></span>
+    <h2 class="h2"><span class="ru">Котики уже<br>ждут у двери</span><span class="uz">Mushuklar allaqachon<br>eshik oldida kutmoqda</span></h2>
+    <div class="info">
+      <a href="https://yandex.uz/maps/?text=%D0%A2%D0%B0%D1%88%D0%BA%D0%B5%D0%BD%D1%82%2C%20%D0%A7%D0%B8%D0%BB%D0%B0%D0%BD%D0%B7%D0%B0%D1%80%203%20%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB%2C%2023" target="_blank" rel="noopener"><i><svg class="i "><use href="#i-pin"/></svg></i><span><small class="ru">Адрес</small><small class="uz">Manzil</small><span class="ru">Ташкент, Чиланзар, 3 квартал, дом 23</span><span class="uz">Toshkent, Chilonzor, 3-kvartal, 23-uy</span></span></a>
+      <div><i><svg class="i "><use href="#i-clock"/></svg></i><span><small class="ru">Режим работы</small><small class="uz">Ish vaqti</small><span class="ru">Каждый день 10:00–22:00, без выходных</span><span class="uz">Har kuni 10:00–22:00, dam olishsiz</span></span></div>
+      <a href="tel:+998770037553"><i><svg class="i "><use href="#i-phone"/></svg></i><span><small class="ru">Телефон</small><small class="uz">Telefon</small>+998 77 003 75 53</span></a>
+      <a href="https://t.me/catsandfriends_uz" target="_blank" rel="noopener"><i><svg class="i "><use href="#i-tg"/></svg></i><span><small class="ru">Telegram-канал</small><small class="uz">Telegram kanal</small>@catsandfriends_uz</span></a>
+      <a href="https://instagram.com/catsandfriends.uz" target="_blank" rel="noopener"><i><svg class="i "><use href="#i-ig"/></svg></i><span><small>Instagram</small>@catsandfriends.uz</span></a>
+    </div>
+  </div>
+  <form id="bron">
+    <h3><span class="ru">Забронировать визит</span><span class="uz">Tashrifni bron qilish</span></h3>
+    <label><span class="ru">Ваше имя</span><span class="uz">Ismingiz</span><input required name="n" autocomplete="name"></label>
+    <label><span class="ru">Телефон</span><span class="uz">Telefon</span><input required name="t" type="tel" value="+998 " autocomplete="tel"></label>
+    <div class="two">
+      <label><span class="ru">Дата</span><span class="uz">Sana</span><input required name="d" type="date"></label>
+      <label><span class="ru">Время</span><span class="uz">Vaqt</span><input required name="h" type="time" min="10:00" max="21:00" value="16:00"></label>
+    </div>
+    <label><span class="ru">Повод</span><span class="uz">Sabab</span><select name="p"><option class="ru">Просто в гости к котикам</option><option class="ru">День рождения</option><option class="ru">Коворкинг</option><option class="ru">Хочу взять котика домой</option><option class="uz">Shunchaki mushuklarni ko‘rish</option><option class="uz">Tug‘ilgan kun</option><option class="uz">Kovorking</option><option class="uz">Mushuk asrab olmoqchiman</option></select></label>
+    <button class="btn y" type="submit"><span class="ru">Отправить заявку</span><span class="uz">So‘rov yuborish</span><svg class="i ar"><use href="#i-send"/></svg></button>
+    <div class="ok" id="ok"><span class="ru">Спасибо! Заявка принята — администратор скоро свяжется с вами. Если срочно — позвоните: <a href="tel:+998770037553"><b>+998 77 003 75 53</b></a></span><span class="uz">Rahmat! So‘rovingiz qabul qilindi — administrator tez orada bog‘lanadi. Shoshilinch bo‘lsa, qo‘ng‘iroq qiling: <a href="tel:+998770037553"><b>+998 77 003 75 53</b></a></span></div>
+  </form>
+</div>
+<div class="wrap"><footer><span>© 2026 Cats &amp; Friends · <span class="ru">Кото-кафе, Ташкент</span><span class="uz">Koto-kafe, Toshkent</span></span><span class="ru">Видео — из Instagram @catsandfriends.uz</span><span class="uz">Videolar — Instagram @catsandfriends.uz dan</span></footer></div>
+</section>
+
+<div class="lb" id="lb"><video controls playsinline></video><button aria-label="close"><svg class="i "><use href="#i-x"/></svg></button></div>
+
+<script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+/* ---------- data ---------- */
+const CATS=[
+ {img:'kot-kivi',ru:['Киви','Трёхцветная королева. Узнала, сколько стоит её содержание, — и не впечатлилась.'],uz:['Kivi','Uch rangli malika. Uni boqish qancha turishini bildi — va parvo qilmadi.']},
+ {img:'kot-grisha',ru:['Гриша','Любимчик подписчиков. Сначала «люлюлю», а потом…'],uz:['Grisha','Obunachilar sevimlisi. Avval «lyulyulyu», keyin esa…']},
+ {img:'kot-tabby',ru:['Полосатый детектив','Специалист по совыванию носа в чужие дела.'],uz:['Yo‘l-yo‘l izquvar','Boshqalarning ishiga burun suqish bo‘yicha mutaxassis.']},
+ {img:'kot-tortie',ru:['Черепаховая муза','Позирует на фоне граффити. Знает свои лучшие ракурсы.'],uz:['Toshbaqa rangli ilhom','Graffiti fonida suratga tushadi. Eng yaxshi rakursini biladi.']},
+ {img:'kot-ryzhik',ru:['Рыжий игроман','Не отходит от игрушки-башни, пока не поймает все шарики.'],uz:['Malla o‘yinqaroq','Barcha sharchalarni tutmaguncha minora-o‘yinchoqdan ketmaydi.']},
+ {img:'kot-seryy',ru:['Серый философ','Смотрит прямо в душу. Иногда лечит лучше психолога.'],uz:['Kulrang faylasuf','To‘g‘ri qalbga qaraydi. Ba’zan psixologdan yaxshiroq davolaydi.']},
+ {img:'kot-sonya',ru:['Главный соня','Спит на столе с удочкой-дразнилкой. Не будить!'],uz:['Bosh uyquchi','Stol ustida o‘yinchoq bilan uxlaydi. Uyg‘otmang!']},
+ {img:'kot-okno',ru:['Мастер подоконника','Наблюдает за Чиланзаром с лучшего места в кафе.'],uz:['Deraza tokchasi ustasi','Kafening eng yaxshi joyidan Chilonzorni kuzatadi.']},
+];
+const REELS=['DeqmeeaNtfR','DfB2UNXN7_j','Dev5zfbNVZl','DegMNMat8fT','De1XMOWNjWD','DeUI1hdI9Bo','De6PQtEtegz','DeOn3PENHpv','DerLkDgoG1y'];
+
+/* ---------- lang ---------- */
+document.addEventListener('focusin',e=>{if(e.target.matches('input,select,textarea'))document.body.classList.add('typing')});document.addEventListener('focusout',()=>document.body.classList.remove('typing'));
+const setLang=l=>{document.documentElement.lang=l;localStorage.cfLang=l;const s=document.querySelector('#bron select');[...s.options].forEach(o=>o.hidden=!o.classList.contains(l));s.value=[...s.options].find(o=>o.classList.contains(l)).value;ScrollTrigger&&ScrollTrigger.refresh()};
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+
+/* ---------- cats grid ---------- */
+const grid=document.getElementById('catGrid');
+CATS.forEach(c=>{const d=document.createElement('div');d.className='cat rv';d.innerHTML=`<img src="assets/p/${c.img}.jpg" alt="${c.ru[0]}" loading="lazy"><div class="glare"></div><div class="lbl"><h3><span class="ru">${c.ru[0]}</span><span class="uz">${c.uz[0]}</span></h3><p><span class="ru">${c.ru[1]}</span><span class="uz">${c.uz[1]}</span></p></div>`;grid.appendChild(d);
+ d.addEventListener('pointermove',e=>{const r=d.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;d.style.transform=`rotateY(${(x-.5)*16}deg) rotateX(${(.5-y)*16}deg)`;d.style.setProperty('--gx',x*100+'%');d.style.setProperty('--gy',y*100+'%')});
+ d.addEventListener('pointerleave',()=>d.style.transform='')});
+
+/* ---------- reels ring ---------- */
+const ring=document.getElementById('ring'),lb=document.getElementById('lb'),lbv=lb.querySelector('video');
+const N=REELS.length,cards=[];
+REELS.forEach((id,i)=>{const c=document.createElement('div');c.className='rc';c.innerHTML=`<video src="assets/v/r-${id}.mp4" poster="assets/p/r-${id}.jpg" muted loop playsinline preload="none"></video><span class="pl"><svg class="i "><use href="#i-play"/></svg><span class="ru">Смотреть со звуком</span><span class="uz">Ovoz bilan</span></span>`;ring.appendChild(c);cards.push(c);
+ c.onclick=()=>{lbv.src=`assets/v/r-${id}.mp4`;lbv.muted=false;lb.classList.add('on');lbv.play()}});
+const closeLb=()=>{lb.classList.remove('on');lbv.pause()};
+lb.querySelector('button').onclick=closeLb;lb.onclick=e=>{if(e.target===lb)closeLb()};
+let ringRot=0;
+function layoutRing(){const cw=ring.offsetWidth,R=cw/(2*Math.tan(Math.PI/N))+24;
+ cards.forEach((c,i)=>{const a=i*360/N;c.style.transform=`rotateY(${a}deg) translateZ(${R}px)`;c._a=a});ring._R=R;setRing(ringRot)}
+function setRing(rot){ringRot=rot;ring.style.transform=`translateZ(${-ring._R}px) rotateY(${rot}deg)`;
+ cards.forEach(c=>{let d=((c._a+rot)%360+540)%360-180;const on=Math.abs(d)<360/N/2;if(on!==c._on){c._on=on;c.classList.toggle('on',on);const v=c.querySelector('video');if(on){v.preload='auto';v.play().catch(()=>{})}else v.pause()}})}
+
+/* ---------- calculator ---------- */
+const P={w:{20:35000,40:50000,60:70000},h:{20:45000,40:60000,60:90000}};
+let day=(new Date().getDay()%6===0)?'h':'w',tm=40,ppl=2;
+const fmt=n=>n.toLocaleString('ru-RU').replace(/,/g,' ');
+function seg(id,cb){const s=document.getElementById(id);s.querySelectorAll('button').forEach(b=>b.onclick=()=>{s.querySelectorAll('button').forEach(x=>x.classList.remove('a'));b.classList.add('a');cb(b.dataset.v);calc()})}
+seg('sDay',v=>day=v);seg('sTime',v=>tm=+v);
+document.querySelectorAll('#sDay button').forEach(b=>b.classList.toggle('a',b.dataset.v===day));
+document.getElementById('mn').onclick=()=>{ppl=Math.max(1,ppl-1);calc()};
+document.getElementById('pl').onclick=()=>{ppl=Math.min(12,ppl+1);calc()};
+document.getElementById('ext').onchange=calc;
+let shown=0;
+function calc(){document.getElementById('ppl').textContent=ppl;const ext=document.getElementById('ext').checked;
+ const one=P[day][tm]+(ext?P[day][20]/2:0),tot=one*ppl,mins=tm+(ext?20:0);
+ const isUz=document.documentElement.lang==='uz';
+ document.getElementById('per').textContent=isUz?`${mins} daq · ${fmt(one)} so‘m/kishi`:`${mins} мин · ${fmt(one)} сум/чел`;
+ const o={v:shown};gsap.to(o,{v:tot,duration:.6,ease:'power2.out',onUpdate:()=>{document.getElementById('sum').textContent=fmt(Math.round(o.v/500)*500)+(isUz?' so‘m':' сум')},onComplete:()=>shown=tot})}
+document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',calc));
+
+/* ---------- form ---------- */
+const f=document.getElementById('bron');f.d.min=new Date().toISOString().slice(0,10);f.d.value=f.d.min;
+f.onsubmit=e=>{e.preventDefault();document.getElementById('ok').style.display='block';f.querySelector('button[type=submit]').style.display='none'};
+
+/* ---------- walking cats: paw trail ---------- */
+document.querySelectorAll('.walker').forEach(w=>{const lane=w.parentNode;let vis=false;
+  new IntersectionObserver(es=>vis=es[0].isIntersecting,{rootMargin:'120px'}).observe(lane.parentNode);
+  let step=0;setInterval(()=>{if(!vis||document.hidden)return;const lr=lane.getBoundingClientRect(),wr=w.getBoundingClientRect();
+    const rev=w.classList.contains('rev');const x=(rev?wr.right-18:wr.left+18)-lr.left+(step++%2?0:9);
+    const p=document.createElement('span');p.className='pawprint';p.style.left=x+'px';p.style.transform=`rotate(${rev?-90:90}deg) translateX(${step%2?-3:3}px)`;
+    p.innerHTML='<svg class="i"><use href="#i-paw"/></svg>';lane.appendChild(p);setTimeout(()=>p.remove(),2900)},420)});
+/* ---------- scroll & motion ---------- */
+gsap.registerPlugin(ScrollTrigger);
+const lenis=new Lenis({lerp:.1});window.lenis=lenis;
+lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();lenis.scrollTo(t,{offset:-60})}}));
+const nav=document.getElementById('nav');lenis.on('scroll',({scroll})=>nav.classList.toggle('s',scroll>40));
+
+setLang(localStorage.cfLang||'ru');
+layoutRing();addEventListener('resize',()=>layoutRing());
+calc();
+
+ScrollTrigger.create({trigger:'#reels',start:'top top',end:()=>'+='+innerHeight*2.2,pin:'.reels .pin',scrub:.6,
+ onUpdate:s=>setRing(-s.progress*360*(N-1)/N)});
+
+gsap.utils.toArray('.rv').forEach(el=>gsap.to(el,{opacity:1,y:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}}));
+gsap.utils.toArray('.ev video').forEach(v=>ScrollTrigger.create({trigger:v.parentNode,start:'top bottom',end:'bottom top',onEnter:()=>{if(!v.src)v.src=v.dataset.src;v.play().catch(()=>{})},onEnterBack:()=>v.play().catch(()=>{}),onLeave:()=>v.pause(),onLeaveBack:()=>v.pause()}));
+
+addEventListener('load',()=>{const L=document.getElementById('loader');L.classList.add('out');
+ gsap.from('.hero h1 .ln>span',{yPercent:110,duration:1.1,stagger:.12,ease:'power4.out',delay:.35});
+ gsap.from('.hero .lead,.hero .cta,.hero .meta,.hero .tag',{opacity:0,y:24,duration:1,stagger:.08,delay:.6});
+ gsap.from('.portal .ring',{scale:.6,opacity:0,duration:1.4,ease:'expo.out',delay:.4});
+ gsap.from('.portal .sticker',{scale:0,duration:.8,ease:'back.out(2)',stagger:.15,delay:1.1});
+ ScrollTrigger.refresh()});
+setTimeout(()=>document.getElementById('loader').classList.add('out'),4000);
+</script>
+
+<!-- ============ 3D: realistic yarn ball + paws ============ -->
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
+import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+
+const canvas=document.getElementById('gl');
+const mobile=matchMedia('(max-width:900px)').matches;
+const renderer=new THREE.WebGLRenderer({canvas,antialias:!mobile,alpha:true,powerPreference:'high-performance'});
+renderer.setPixelRatio(Math.min(devicePixelRatio,mobile?1.5:2));
+renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;
+renderer.outputColorSpace=THREE.SRGBColorSpace;
+const scene=new THREE.Scene();
+const pm=new THREE.PMREMGenerator(renderer);scene.environment=pm.fromScene(new RoomEnvironment(),.04).texture;
+const camera=new THREE.PerspectiveCamera(35,1,.1,100);camera.position.z=12;
+scene.add(new THREE.HemisphereLight(0xfff6dc,0x6b4a10,.9));
+const key=new THREE.DirectionalLight(0xfff8ec,2.0);key.position.set(4,6,8);scene.add(key);
+const rim=new THREE.DirectionalLight(0xffd88a,1.1);rim.position.set(-6,-2,-4);scene.add(rim);
+
+/* ----- realistic yarn ball ----- */
+// 1) ply texture: 3 twisted plies + fibres, generated on canvas (colour + normal map)
+function plyTextures(){
+  const W=512,H=128,h=new Float32Array(W*H),TAU=Math.PI*2;
+  for(let j=0;j<H;j++)for(let i=0;i<W;i++){
+    const u=i/W,v=j/H,ph=(u*2+v*3)%1;            // 2 twists along, 3 plies around -> seamless
+    const ply=Math.pow(Math.sin(Math.PI*ph),.3);  // soft, rounded plies (not a hard rope)
+    const warp=Math.sin(TAU*(u*3+v*5))*.9;        // periodic warp keeps the tile seamless
+    const fib=Math.sin((u*2+v*3)*TAU*23+warp)*.05+Math.sin((u*2+v*3)*TAU*41+warp*1.7)*.03;
+    h[j*W+i]=Math.min(1,Math.max(0,ply*.72+fib+(Math.random()-.5)*.22));}
+  const mk=f=>{const c=document.createElement('canvas');c.width=W;c.height=H;const x=c.getContext('2d'),im=x.createImageData(W,H);
+    for(let j=0;j<H;j++)for(let i=0;i<W;i++){const k=(j*W+i)*4,[r,g,b]=f(i,j);im.data[k]=r;im.data[k+1]=g;im.data[k+2]=b;im.data[k+3]=255}
+    x.putImageData(im,0,0);const t=new THREE.CanvasTexture(c);t.wrapS=t.wrapT=THREE.RepeatWrapping;t.anisotropy=8;return t};
+  const at=(i,j)=>h[((j+H)%H)*W+((i+W)%W)];
+  const map=mk((i,j)=>{const t=at(i,j),s=.78+.22*t;return[255*s,248*s,232*s]});map.colorSpace=THREE.SRGBColorSpace;
+  const nor=mk((i,j)=>{const dx=(at(i+1,j)-at(i-1,j))*1.6,dy=(at(i,j+1)-at(i,j-1))*1.6,l=Math.hypot(dx,dy,1);return[(-dx/l*.5+.5)*255,(-dy/l*.5+.5)*255,(1/l*.5+.5)*255]});
+  const rough=mk((i,j)=>{const v=225+30*(1-at(i,j));return[v,v,v]});
+  return {map,nor,rough}}
+const TX=plyTextures();
+function yarnMaterial(rep){
+  const t={};for(const k in TX){t[k]=TX[k].clone();t[k].repeat.set(rep,1);t[k].needsUpdate=true}
+  return new THREE.MeshPhysicalMaterial({color:'#EDBA36',vertexColors:true,map:t.map,normalMap:t.nor,normalScale:new THREE.Vector2(.7,.7),
+    roughnessMap:t.rough,roughness:1,metalness:0,sheen:1,sheenRoughness:.65,sheenColor:new THREE.Color('#FFE6A0'),envMapIntensity:.4})}
+
+// 2) winding: bands of parallel strands that pivot around a shared axis (like a real hand-wound ball)
+const TUBE=.052,rnd=()=>new THREE.Vector3(Math.random()-.5,Math.random()-.5,Math.random()-.5).normalize();
+const SEGS=mobile?84:120,RAD=mobile?6:8;
+function band(r,count,shade){
+  const out=[],pivot=rnd(),n0=new THREE.Vector3().crossVectors(pivot,rnd()).normalize();
+  const step=TUBE*2.02/r;
+  for(let k=0;k<count;k++){
+    const n=n0.clone().applyAxisAngle(pivot,(k-(count-1)/2)*step);   // circle normal rotated about pivot
+    const a=pivot.clone(),b=new THREE.Vector3().crossVectors(n,a).normalize();
+    const pts=[],ph=Math.random()*6.28,wob=.012+Math.random()*.012;
+    const off=(Math.random()-.5)*.012;
+    for(let i=0;i<64;i++){const t=i/64*Math.PI*2,rr=r*(1+Math.sin(t*3+ph)*wob)+off;
+      pts.push(a.clone().multiplyScalar(Math.cos(t)*rr).addScaledVector(b,Math.sin(t)*rr))}
+    const g=new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts,true,'catmullrom',.5),SEGS,TUBE,RAD,true);
+    const c=new THREE.Color(1,1,1).multiplyScalar(shade*(.94+Math.random()*.08));
+    const col=new Float32Array(g.attributes.position.count*3);for(let i=0;i<col.length;i+=3){col[i]=c.r;col[i+1]=c.g;col[i+2]=c.b}
+    g.setAttribute('color',new THREE.BufferAttribute(col,3));out.push(g)}
+  return out}
+const geos=[];
+// many narrow bands crossing at random angles = hand-wound look (same strand budget as before)
+const LAYERS=mobile?[[.86,9,5,.74],[.93,10,6,.88],[1.0,10,6,1]]:[[.84,10,6,.66],[.9,12,6,.8],[.96,14,6,.91],[1.02,12,6,1]];
+LAYERS.forEach(([r,bands,cnt,shade])=>{for(let i=0;i<bands;i++)geos.push(...band(r+i*.0075,cnt,shade))}); // each band slightly above the previous -> no interpenetration
+const yarnMat=yarnMaterial(24);
+const ball=new THREE.Group();
+ball.add(new THREE.Mesh(mergeGeometries(geos),yarnMat));
+ball.add(new THREE.Mesh(new THREE.SphereGeometry(.83,48,32),new THREE.MeshStandardMaterial({color:'#b98a18',roughness:1})));
+// 3) fuzz: thousands of tiny fibres sticking out -> soft silhouette
+{const NF=mobile?3000:9000,pos=new Float32Array(NF*6);
+ for(let i=0;i<NF;i++){const d=rnd(),p=d.clone().multiplyScalar(1.0+Math.random()*.06),q=p.clone().add(rnd().multiplyScalar(.02+Math.random()*.06)).addScaledVector(d,.015);
+   pos.set([p.x,p.y,p.z,q.x,q.y,q.z],i*6)}
+ const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.BufferAttribute(pos,3));
+ ball.add(new THREE.LineSegments(g,new THREE.LineBasicMaterial({color:'#FBE4A6',transparent:true,opacity:.26,depthWrite:false})))}
+scene.add(ball);
+
+// 4) soft contact shadow under the ball
+const shadowTex=(()=>{const c=document.createElement('canvas');c.width=c.height=128;const x=c.getContext('2d'),g=x.createRadialGradient(64,64,0,64,64,64);
+  g.addColorStop(0,'rgba(50,34,0,.62)');g.addColorStop(.35,'rgba(50,34,0,.3)');g.addColorStop(1,'rgba(60,40,0,0)');x.fillStyle=g;x.fillRect(0,0,128,128);return new THREE.CanvasTexture(c)})();
+const shadow=new THREE.Mesh(new THREE.PlaneGeometry(1,1),new THREE.MeshBasicMaterial({map:shadowTex,transparent:true,depthWrite:false}));
+shadow.renderOrder=-1;scene.add(shadow);
+
+/* ----- loose yarn tail: leaves the ball, drops to the floor and lies there in a loose loop ----- */
+const FL=-1.03; // floor level (ball-local), same plane as the contact shadow
+const tailPts=[[.6,-.74,.42],[.8,-.93,.47],[1.0,FL+.01,.4],[1.28,FL,.22],[1.52,FL,.42],[1.42,FL,.68],[1.14,FL,.6],[1.2,FL,.32],[1.5,FL,.1],[1.78,FL,.2]].map(p=>new THREE.Vector3(...p));
+const tail=new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(tailPts,false,'catmullrom',.5),260,TUBE,RAD,false),yarnMaterial(20));
+{const g=tail.geometry,col=new Float32Array(g.attributes.position.count*3).fill(1);g.setAttribute('color',new THREE.BufferAttribute(col,3))}
+const tailPivot=new THREE.Group();tailPivot.add(tail);scene.add(tailPivot);
+/* ----- floating paws ----- */
+function pawShape(){const s=new THREE.Shape();s.absellipse(0,0,.42,.36,0,Math.PI*2);return s}
+const toe=(x,y,r)=>{const s=new THREE.Shape();s.absellipse(x,y,r*.82,r,0,Math.PI*2);return s};
+const pawGeo=mergeGeometries([pawShape(),toe(-.42,.42,.15),toe(-.15,.62,.16),toe(.15,.62,.16),toe(.42,.42,.15)].map(s=>new THREE.ExtrudeGeometry(s,{depth:.08,bevelEnabled:true,bevelThickness:.05,bevelSize:.04,bevelSegments:3,curveSegments:14})));
+pawGeo.center();
+const PN=mobile?0:26;
+const paws=new THREE.InstancedMesh(pawGeo,new THREE.MeshStandardMaterial({roughness:.5,metalness:.1}),PN);
+const pawData=[...Array(PN)].map((_,i)=>({x:(Math.random()<.5?-1:1)*(.44+Math.random()*.08),y:Math.random(),z:-2-Math.random()*5,s:.16+Math.random()*.2,r:Math.random()*6,v:(Math.random()-.5)*.6,k:.25+Math.random()*.5}));
+pawData.forEach((d,i)=>paws.setColorAt(i,new THREE.Color(i%3?'#17130B':'#F5C518')));
+scene.add(paws);
+const dummy=new THREE.Object3D();
+
+/* ----- layout helpers ----- */
+let W=0,H=0,visH=0,visW=0;
+function resize(){W=innerWidth;H=innerHeight;renderer.setSize(W,H,false);camera.aspect=W/H;camera.updateProjectionMatrix();
+  visH=2*Math.tan(THREE.MathUtils.degToRad(camera.fov/2))*camera.position.z;visW=visH*camera.aspect}
+resize();addEventListener('resize',resize);
+const spots=[...document.querySelectorAll('[data-ball]')];
+const target={x:0,y:0,s:1},cur={x:3,y:0,s:.01};
+const mouse={x:0,y:0};addEventListener('pointermove',e=>{mouse.x=e.clientX/W-.5;mouse.y=e.clientY/H-.5});
+let spin=0,bounce=0;
+addEventListener('click',e=>{const sx=(cur.x/visW+.5)*W,sy=(.5-cur.y/visH)*H;if(Math.hypot(e.clientX-sx,e.clientY-sy)<cur.s*W/visW*1.1)bounce=1});
+
+function pickSpot(){let best=null,bd=1e9;
+  for(const el of spots){const r=el.getBoundingClientRect();if(!r.width)continue;const cy=r.top+r.height/2,d=Math.abs(cy-H/2);if(d<bd){bd=d;best={r,k:+el.dataset.ball}}}
+  if(!best)return;const {r,k}=best;
+  const cx=r.left+r.width/2,cy=r.top+r.height/2;
+  target.x=(cx/W-.5)*visW;target.y=-(cy/H-.5)*visH;target.s=r.width/W*visW/2*k;
+  // hide when spot far off-screen (reels/contact)
+  if(cy<-H*.6||cy>H*1.6)target.s=0.001}
+
+const clock=new THREE.Clock();let prevX=cur.x,prevY=cur.y;
+const tmpA=new THREE.Vector3(),grav=new THREE.Vector3(0,-.012,0);
+function frame(){
+  const dt=Math.min(clock.getDelta(),.05),t=clock.elapsedTime;
+  pickSpot();
+  const e=1-Math.pow(.0025,dt);
+  cur.x+=(target.x-cur.x)*e;cur.y+=(target.y-cur.y)*e;cur.s+=(target.s-cur.s)*e;
+  bounce*=.92;
+  const s=Math.max(cur.s,.001)*(1+Math.sin(bounce*12)*bounce*.15);
+  ball.position.set(cur.x,cur.y+Math.sin(t*1.4)*.06*cur.s,0);ball.scale.setScalar(s);
+  // rolling from motion + idle spin + mouse tilt
+  const dx=cur.x-prevX,dy=cur.y-prevY;prevX=cur.x;prevY=cur.y;
+  spin+=dt*.25;
+  ball.rotation.z-=dx/Math.max(s,.05);ball.rotation.x-=dy/Math.max(s,.05);
+  ball.rotation.y=spin+mouse.x*.6;ball.rotation.x+=(mouse.y*.4-ball.rotation.x)*.0;
+  tailPivot.position.copy(ball.position);tailPivot.scale.setScalar(s);
+  shadow.position.set(cur.x,cur.y+(FL-.05)*s,-.2);shadow.scale.set(2.5*s,.38*s,1);shadow.visible=s>.02;
+  tailPivot.rotation.set(0,Math.sin(t*.6)*.12+mouse.x*.15,0);
+  tail.geometry.attributes.position.needsUpdate=false;
+  // paws parallax with page scroll
+  const sc=scrollY/H;
+  pawData.forEach((d,i)=>{const yy=((d.y*3-sc*d.k)%3+3)%3-1.5;
+    dummy.position.set(d.x*visW*(camera.position.z-d.z)/camera.position.z*1.1,yy*visH*.9*(camera.position.z-d.z)/camera.position.z,d.z);dummy.rotation.set(Math.sin(t*.5+d.r)*.5,Math.cos(t*.4+d.r)*.6,d.r+t*d.v*.3);dummy.scale.setScalar(d.s*Math.max(0,1-sc*1.3));dummy.updateMatrix();paws.setMatrixAt(i,dummy.matrix)});
+  paws.instanceMatrix.needsUpdate=true;
+  camera.position.x+=(mouse.x*.6-camera.position.x)*.04;camera.position.y+=(-mouse.y*.4-camera.position.y)*.04;camera.lookAt(0,0,0);
+  renderer.render(scene,camera);requestAnimationFrame(frame)}
+frame();
+</script>
+</body>
+</html>
